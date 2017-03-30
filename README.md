@@ -1,4 +1,7 @@
 # open in buttons for finder toolbar
+
+![screenshot](images/screenshot.png "screenshot")
+
 Open in TextMate, open in Visual Studio Code buttons for Finder  toolbar.  
 
 - Download apps
