@@ -9,7 +9,7 @@
 - Terminal
 - iTerm
 
-##How to
+## How to
 - Download apps
 - copy to applications folder
 - and drag it to Finder toolbar (hold ⌘cmd)  
