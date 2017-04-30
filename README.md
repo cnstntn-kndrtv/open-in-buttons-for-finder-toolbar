@@ -1,4 +1,4 @@
-# open in buttons for finder toolbar
+# 'open in buttons' for finder toolbar
 
 ![screenshot](src/images/screenshot.png "screenshot")
 
