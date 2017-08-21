@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	set _t to "iTerm"	tell application "Finder"		set _cwd to quoted form of (POSIX path of (folder of the front window as alias))	end tell	_cdto(_cwd, _t)end runon _cdto(_cwd, _t)	activate application _t	tell application "System Events"		tell process _t			keystroke "t" using command down		end tell				tell application "iTerm"			try				set _tab to last tab of last window			end try						tell _tab				tell current session					write text "cd " &amp; _cwd &amp; ";clear;"				end tell			end tell					end tell	end tell	end _cdto</string>
+					<string>on run	set _t to "iTerm"	tell application "Finder"		set _cwd to quoted form of (POSIX path of (folder of the front window as alias))	end tell	_cdto(_cwd, _t)end runon _cdto(_cwd, _t)	activate application _t	log _cwd	tell application "System Events"		tell process _t			keystroke "t" using command down		end tell				tell application "iTerm"			try				set _tab to last tab of last window			end try						set _session to (current session of current window)						tell _session				write text "cd " &amp; _cwd &amp; ";clear;"			end tell					end tell	end tell	end _cdto</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -75,6 +75,8 @@
 				</array>
 				<key>OutputUUID</key>
 				<string>A8D5F191-1FFD-4B22-8CD0-3C48202415B4</string>
+				<key>ShowWhenRun</key>
+				<false/>
 				<key>UUID</key>
 				<string>A50D11C6-A2DA-41AB-8168-FCD022088902</string>
 				<key>UnlocalizedApplications</key>
@@ -105,7 +107,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>395.500000:248.000000</string>
+				<string>442.000000:316.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
