@@ -16,10 +16,6 @@
 - copy to applications folder
 - and drag it to Finder toolbar (hold ⌘cmd)
 
-## Where is the magic come from
-
-take a look in src/src folder
-
 ## Sublime Text
 Read [this topic](https://gist.github.com/artero/1236170 "this topic") before run "open-in-Sublime" app
 
@@ -27,4 +23,6 @@ Read [this topic](https://gist.github.com/artero/1236170 "this topic") before ru
 Read [this](https://manual.macromates.com/en/using_textmate_from_terminal.html "this") before run the app 
 
 
+## Where is the magic come from
 
+take a look in src/src folder
