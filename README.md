@@ -26,7 +26,7 @@ Open Setting -> Keyboard -> Touch Bar and add quick access buton to touch bar.
   
 
 Then open `*.workflow` files from `scr/touchbar` and save them.  
-Or copy `*.workflow` files to `~/Users/constantin/Library/Services`
+Or copy `*.workflow` files to `~/Library/Services`
 
 ### Finder toolbar. 
 - Download apps
