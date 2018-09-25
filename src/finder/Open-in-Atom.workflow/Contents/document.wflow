@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>428</string>
+	<string>444.38</string>
 	<key>AMApplicationVersion</key>
-	<string>2.7</string>
+	<string>2.9</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -50,7 +50,7 @@
 				<key>ActionParameters</key>
 				<dict/>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.Get_Selected_Finder_Items_2</string>
+				<string>com.apple.Automator.GetSelectedFinderItems2</string>
 				<key>CFBundleVersion</key>
 				<string>2.1.1</string>
 				<key>CanShowSelectedItemsWhenRun</key>
@@ -128,7 +128,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>while read file; do /usr/local/bin/atom "$file"; done</string>
+					<string>while read file; do /usr/local/bin/mate "$file"; done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -241,9 +241,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>442.000000:251.000000</string>
+				<string>309.000000:249.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/ru.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -251,7 +251,7 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>4CA603B2-B57D-42DF-A6B5-55C606FAB547</key>
+		<key>A8940FA7-70F1-44D7-B328-AA3FCAEC5FCF</key>
 		<dict>
 			<key>from</key>
 			<string>CEDE9B3F-0F58-4AE0-82B8-5A0BEEE334C9 - CEDE9B3F-0F58-4AE0-82B8-5A0BEEE334C9</string>
