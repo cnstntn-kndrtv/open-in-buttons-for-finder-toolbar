@@ -1,5 +1,8 @@
 # 'open in' buttons for MacOS X Finder toolbar and mb pro touchbar
 
+I have made it because couldn't find any useful and easy to extend alternative. I hope it helps for you to.  
+For now i'm just using extensions for touchbar. Thats why extensions for Finder toolbar may not work correctly and have only light icons (looks ugly with dark mode). However you can always fork it and fix it.  
+
 ## Finder toolbar
 ![screenshot](src/images/screenshot.png "finder")
 
