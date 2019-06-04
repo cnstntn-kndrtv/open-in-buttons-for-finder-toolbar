@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>428</string>
+	<string>444.42</string>
 	<key>AMApplicationVersion</key>
-	<string>2.7</string>
+	<string>2.9</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -51,7 +51,25 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run	set _t to "iTerm"	tell application "Finder"		set _cwd to quoted form of (POSIX path of (folder of the front window as alias))	end tell	_cdto(_cwd, _t)end runon _cdto(_cwd, _t)	activate application _t	log _cwd	tell application "System Events"		tell process _t			keystroke "t" using command down		end tell				tell application "iTerm"			try				set _tab to last tab of last window			end try						set _session to (current session of current window)						tell _session				write text "cd " &amp; _cwd &amp; ";clear;"			end tell					end tell	end tell	end _cdto</string>
+					<string>on run
+	set _t to "iTerm"
+	tell application "Finder"
+		set _cwd to quoted form of (POSIX path of (selection as alias))
+	end tell
+	
+	_cdto(_cwd, _t)
+end run
+
+on _cdto(_cwd, _t)
+	tell application "iTerm"
+		set new_term to (create window with default profile)
+		tell new_term
+			tell the current session
+				write text "cd " &amp; _cwd &amp; "; clear;"
+			end tell
+		end tell
+	end tell
+end _cdtoon _cdto(_cwd, _t)	activate application _t	log _cwd	tell application "System Events"		tell process _t			keystroke "t" using command down		end tell				tell application "iTerm"			try				set _tab to last tab of last window			end try						set _session to (current session of current window)						tell _session				write text "cd " &amp; _cwd &amp; ";clear;"			end tell					end tell	end tell	end _cdto</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -107,7 +125,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>442.000000:838.000000</string>
+				<string>376.500000:586.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
