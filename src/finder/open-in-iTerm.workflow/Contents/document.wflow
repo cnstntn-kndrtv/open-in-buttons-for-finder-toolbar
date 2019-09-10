@@ -47,29 +47,11 @@
 				<key>ActionBundlePath</key>
 				<string>/System/Library/Automator/Run AppleScript.action</string>
 				<key>ActionName</key>
-				<string>Запустить AppleScript</string>
+				<string>Run AppleScript</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run
-	set _t to "iTerm"
-	tell application "Finder"
-		set _cwd to quoted form of (POSIX path of (selection as alias))
-	end tell
-	
-	_cdto(_cwd, _t)
-end run
-
-on _cdto(_cwd, _t)
-	tell application "iTerm"
-		set new_term to (create window with default profile)
-		tell new_term
-			tell the current session
-				write text "cd " &amp; _cwd &amp; "; clear;"
-			end tell
-		end tell
-	end tell
-end _cdtoon _cdto(_cwd, _t)	activate application _t	log _cwd	tell application "System Events"		tell process _t			keystroke "t" using command down		end tell				tell application "iTerm"			try				set _tab to last tab of last window			end try						set _session to (current session of current window)						tell _session				write text "cd " &amp; _cwd &amp; ";clear;"			end tell					end tell	end tell	end _cdto</string>
+					<string>on run	set _t to "iTerm"	tell application "Finder"		set _cwd to quoted form of (POSIX path of (selection as alias))	end tell		_cdto(_cwd, _t)end runon _cdto(_cwd, _t)	tell application "iTerm"		set new_term to (create window with default profile)		tell new_term			tell the current session				write text "if [ -d " &amp; _cwd &amp; " ]; then cd " &amp; _cwd &amp; "; else cd \"$(dirname " &amp; _cwd &amp; ")\"; fi; clear;"			end tell		end tell	end tellend _cdtoon _cdto(_cwd, _t)	activate application _t	log _cwd	tell application "System Events"		tell process _t			keystroke "t" using command down		end tell				tell application "iTerm"			try				set _tab to last tab of last window			end try						set _session to (current session of current window)						tell _session				write text "cd " &amp; _cwd &amp; ";clear;"			end tell					end tell	end tell	end _cdto</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -89,7 +71,7 @@ end _cdtoon _cdto(_cwd, _t)	activate application _t	log _cwd	tell applicati
 				<string>F8146734-435F-4CC0-BF1E-74378FFB827F</string>
 				<key>Keywords</key>
 				<array>
-					<string>Запустить</string>
+					<string>Run</string>
 				</array>
 				<key>OutputUUID</key>
 				<string>A8D5F191-1FFD-4B22-8CD0-3C48202415B4</string>
@@ -125,7 +107,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>376.500000:586.000000</string>
+				<string>498.500000:247.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
