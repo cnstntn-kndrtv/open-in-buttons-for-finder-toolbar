@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>444.42</string>
+	<string>492</string>
 	<key>AMApplicationVersion</key>
-	<string>2.9</string>
+	<string>2.10</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -21,19 +21,93 @@
 					<true/>
 					<key>Types</key>
 					<array>
-						<string>com.apple.applescript.object</string>
+						<string>com.apple.cocoa.path</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.0.2</string>
+				<string>2.1.1</string>
 				<key>AMApplication</key>
 				<array>
-					<string>Automator</string>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict/>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Selected Finder Items 2.action</string>
+				<key>ActionName</key>
+				<string>Get Selected Finder Items</string>
+				<key>ActionParameters</key>
+				<dict/>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.GetSelectedFinderItems2</string>
+				<key>CFBundleVersion</key>
+				<string>2.1.1</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>AMGetSelectedFinderItemsAction</string>
+				<key>InputUUID</key>
+				<string>D6DBC518-826C-4746-8652-9FD38CFB8311</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>B75916B2-5656-47D9-9C75-768DCAEA3176</string>
+				<key>UUID</key>
+				<string>CEDE9B3F-0F58-4AE0-82B8-5A0BEEE334C9</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict/>
+			</dict>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<false/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.1</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
-					<key>source</key>
-					<dict/>
+					<key>appPath</key>
+					<dict>
+						<key>isPathPopUp</key>
+						<true/>
+						<key>variableUUIDsInMenu</key>
+						<array/>
+					</dict>
 				</dict>
 				<key>AMProvides</key>
 				<dict>
@@ -41,61 +115,56 @@
 					<string>List</string>
 					<key>Types</key>
 					<array>
-						<string>com.apple.applescript.object</string>
+						<string>com.apple.cocoa.path</string>
 					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<string>/System/Library/Automator/Open Finder Items.action</string>
 				<key>ActionName</key>
-				<string>Run AppleScript</string>
+				<string>Open Finder Items</string>
 				<key>ActionParameters</key>
 				<dict>
-					<key>source</key>
-					<string>on run	set _t to "iTerm"	tell application "Finder"		set _cwd to quoted form of (POSIX path of (selection as alias))	end tell		_cdto(_cwd, _t)end runon _cdto(_cwd, _t)	tell application "iTerm"		set new_term to (create window with default profile)		tell new_term			tell the current session				write text "if [ -d " &amp; _cwd &amp; " ]; then cd " &amp; _cwd &amp; "; else cd \"$(dirname " &amp; _cwd &amp; ")\"; fi; clear;"			end tell		end tell	end tellend _cdtoon _cdto(_cwd, _t)	activate application _t	log _cwd	tell application "System Events"		tell process _t			keystroke "t" using command down		end tell				tell application "iTerm"			try				set _tab to last tab of last window			end try						set _session to (current session of current window)						tell _session				write text "cd " &amp; _cwd &amp; ";clear;"			end tell					end tell	end tell	end _cdto</string>
+					<key>appPath</key>
+					<string>/Applications/Visual Studio Code.app</string>
 				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.RunScript</string>
+				<string>com.apple.Automator.OpenFinderItems</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.2</string>
+				<string>1.1.1</string>
 				<key>CanShowSelectedItemsWhenRun</key>
-				<false/>
+				<true/>
 				<key>CanShowWhenRun</key>
 				<true/>
 				<key>Category</key>
 				<array>
-					<string>AMCategoryUtilities</string>
+					<string>AMCategoryFilesAndFolders</string>
 				</array>
 				<key>Class Name</key>
-				<string>RunScriptAction</string>
+				<string>AMOpenFinderItems</string>
 				<key>InputUUID</key>
-				<string>F8146734-435F-4CC0-BF1E-74378FFB827F</string>
+				<string>CC71F3B6-2242-4AB5-9253-5471BC9E9358</string>
 				<key>Keywords</key>
 				<array>
-					<string>Run</string>
+					<string>Open</string>
+					<string>Document</string>
+					<string>File</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>A8D5F191-1FFD-4B22-8CD0-3C48202415B4</string>
-				<key>ShowWhenRun</key>
-				<false/>
+				<string>3A17FB8E-5510-4953-A693-278AA3E48127</string>
 				<key>UUID</key>
-				<string>A50D11C6-A2DA-41AB-8168-FCD022088902</string>
+				<string>DA20227B-121E-4928-8295-883347179EF2</string>
 				<key>UnlocalizedApplications</key>
 				<array>
-					<string>Automator</string>
+					<string>Finder</string>
 				</array>
 				<key>arguments</key>
 				<dict>
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string>on run {input, parameters}
-	
-	(* Your script goes here *)
-	
-	return input
-end run</string>
+						<string></string>
 						<key>name</key>
-						<string>source</string>
+						<string>appPath</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -104,19 +173,29 @@ end run</string>
 						<string>0</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>498.500000:247.000000</string>
+				<string>309.000000:170.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+				<string>/System/Library/Automator/Open Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
 		</dict>
 	</array>
 	<key>connectors</key>
-	<dict/>
+	<dict>
+		<key>ACAB4CC9-52BF-4F6C-B86F-AFB9FA93C838</key>
+		<dict>
+			<key>from</key>
+			<string>CEDE9B3F-0F58-4AE0-82B8-5A0BEEE334C9 - CEDE9B3F-0F58-4AE0-82B8-5A0BEEE334C9</string>
+			<key>to</key>
+			<string>DA20227B-121E-4928-8295-883347179EF2 - DA20227B-121E-4928-8295-883347179EF2</string>
+		</dict>
+	</dict>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>workflowTypeIdentifier</key>
